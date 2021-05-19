@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ксения](https://up.htmlacademy.ru/htmlcss/31/user/1799323).
-* Наставник: [Сергей_Зубов] (https://htmlacademy.ru/profile/serj).
+* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
 
 ---
 
