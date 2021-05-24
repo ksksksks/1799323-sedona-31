@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+
+  <body>
+    <header>
+        <nav>
+           <!-- Кликабельный логотип на главной странице-->
+           <a href="index.html"></a>
+             <img src="https://via.placeholder.com/138x70" alt="Логотип штата Седона">
+           </a>
+          <!-- Меню навигации -->
+          <ul>
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a>Гостиницы</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <img src="https://via.placeholder.com/1200x509"  alt="Фон для приветствия">
+        <h1>КАТАЛОГ</h1>
+
+        <!-- Список фильтров с чекбоксом -->
+        <section>
+          <ul>
+            <p><h3>ИНФРАСТРУКТУРА:</h3></p>
+            <li>
+              <p><input type="checkbox" checked>Бассейн</p>
+              <p><input type="checkbox">Парковка</p>
+              <p><input type="checkbox">Wi-Fi</p>
+            </li>
+            <p><h3>ТИП ЖИЛЬЯ:</h3></p>
+            <li>
+              <p><input type="checkbox" checked>Гостиница</p>
+              <p><input type="checkbox" checked>Мотель</p>
+              <p><input type="checkbox" checked>Апартаменты</p>             
+            </li>
+          </ul>
+        </section>
+        <!-- Фильтр по стоимости -->
+        <section>
+          <!-- Заголовок или название таблицы? -->
+          <p><h3>Стоимость в сутки, ₽:</h3></p>
+          <!-- Добавить рамки в стилях -->
+          <table>
+            <tr>
+              <b><tb> ОТ 0 </tb>
+                 <tb> ДО 3000 </tb></b>
+            </tr>
+          </table>
+          <!--  ЧТО-ТО СДЕЛАТЬ С ФОРМОЙ!!!!-->
+          <form>
+           <input type="range" min="0" max="5000" value="3000">
+           <input type="button" value="ПОКАЗАТЬ">
+           </form>
+        </section>
+
+        <section>
+           <p><h3>НАЙДЕНО: 3</h3></p>
+           <p><h4>СОРТИРОВКА:</h4></p>
+
+           <input type="submit" value="ПО ЦЕНЕ">
+           <input type="submit" value="ПО ТИПУ">
+           <input type="submit" value="ПО РЕЙТИНГУ">
+
+           <input type="submit" value="по убыванию">
+           <input type="submit" value="по возрастанию">          
+          </section>
+
+      </main>
+
+      <footer>
+
+        <section>
+          <h4>Наши контакты:</h4>
+          <p><b>#visitSEDONA</b></p>
+          <b> <a href="tel.+78005558628"+7 800 555-86-28></a> </b>
+        </section>
+    
+        <section>
+          <h4>Мы в социальных сетях:</h4>
+          <ul>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <li>
+              <a href="#">Youtube</a>
+            </li>
+          </ul>
+        </section>
+    
+          <section>
+            <p>Разработано:</p>
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </section>
+
+        </footer>
+
+  </body>
+
+  </html>
