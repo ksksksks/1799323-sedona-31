@@ -1,10 +1,180 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-      <meta charset="utf-8">
-      <title>Отели в Седоне</title>
+        <meta charset="utf-8">
+        <title>Отели в Седоне</title>
     </head>
+
     <body>
-      <a href="index.html">Страница сайта</a>
+        <header>
+            <nav>
+                <a href="index.html"></a>
+                <img src="#" alt="Логотип штата Седона">
+
+                <!-- Меню навигации -->
+                <ul>
+                    <li><a href="blank.html">Информация</a></li>
+                    <li><a href="blank.html">Фото и видео</a></li>
+                    <li><a href="blank.html">Карта штата</a></li>
+                    <li><a>Гостиницы</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <mian>
+            <!-- Здесь будет фон для фильтров -->
+            <h1>КАТАЛОГ ОТЕЛЕЙ</h1>
+            <!-- Раздел с фильтрами -->
+          
+          <form method="get">
+            <fieldset>
+                <legend>ИНФРАСТРУКТУРА</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="pool" id="filter-pool" checked>
+                        <label for="filter-pool">Бассейн</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="parking" id="filter-parking">
+                        <label for="filter-parking">Парковка</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                        <label for="filter-wi-fi">Wi-Fi</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>ТИП ЖИЛЬЯ:</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                        <label for="filter-hotel">Гостиница</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="motel" id="filter-motel" checked>
+                        <label for="filter-motel">Мотель</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="aparts" id="filter-aparts" checked>
+                        <label for="filter-aparts">Апартаменты</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>СТОИМОСТЬ В СУТКИ, ₽</legend>
+                <table>
+                    <tr>
+                        <tb>ОТ 0 </tb>        <!-- Пока не понимаю как сюда вывести значения из формы ниже -->
+                        <tb>ДО 3000 </tb>     <!-- Пока не понимаю как сюда вывести значения из формы ниже -->
+                    </tr>
+                </table>
+            </fieldset>
+
+            <form>
+                <input type="range" min="0" max="5000" value="3000" id="range-from">
+                <p>
+                    <input type="submit" value="ПОКАЗАТЬ" id="range-until">
+                </p>
+            </form>
+
+          </form>
+          
+            <section>
+                <h3>НАЙДЕНО: 3</h3>          <!-- Пока не понимаю как сюда вывести значения из формы ниже -->
+                <h4>СОРТИРОВКА:</h4>
+
+                <input type="submit" value="ПО ЦЕНЕ" checked>
+                <input type="submit" value="ПО ТИПУ">
+                <input type="submit" value="ПО РЕЙТИНГУ">
+     
+                <input type="submit" value="по убыванию">
+                <input type="submit" value="по возрастанию"> 
+            </section>  
+            
+            <section>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h5>Amara Resort & Spa</h5>
+                        </a>
+                        <p>Гостиница</p>
+                        <p>ОТ 4000 ₽</p>
+                        <button type="button">ПОДРОБНЕЕ</button> 
+                        <input type="submit" value="ЗАБРОНИРОВАТЬ">
+                        <p>
+                            <img src="#" alt="5 звезд">
+                        </p>
+                        <p>
+                            РЕЙТИНГ 8,5
+                        </p>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <h5>Desert Quail Inn</h5>
+                        </a>
+                        <p>Мотель</p>
+                        <p>ОТ 3000 ₽</p>
+                        <button type="button">ПОДРОБНЕЕ</button> 
+                        <input type="submit" value="ЗАБРОНИРОВАТЬ">
+                        <p>
+                            <img src="#" alt="3 звезды">
+                        </p>
+                        <p>
+                            РЕЙТИНГ 8,9
+                        </p>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <h5>Villas at Poco Diablo</h5>
+                        </a>
+                        <p>Апартаменты</p>
+                        <p>ОТ 2000 ₽</p>
+                        <button type="button">ПОДРОБНЕЕ</button> 
+                        <input type="submit" value="ЗАБРОНИРОВАТЬ">
+                        <p>
+                            <img src="#" alt="2 звезды">
+                        </p>
+                        <p>
+                            РЕЙТИНГ 9,2
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+        </mian>
+
+        <footer>
+            <section>
+                <h4>Наши контакты:</h4>
+                <p>#visitSEDONA</p>
+                <a href="+78005558628">+7 800 555-86-28</a>
+            </section>
+
+            <section>
+                <h4>Мы в социальных сетях:</h4>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/">Twitter</a>  <!-- Тут должен быть логотип-->
+                    </li>
+                    <li>
+                        <a href="https://ru-ru.facebook.com/">Facebook</a>  <!-- Тут должен быть логотип-->
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/">Youtube</a>  <!-- Тут должен быть логотип-->
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                WEBSITE BY:
+                <a href="https://htmlacademy.ru/intensive/htmlcss">.HTML ACADEMY</a>
+            </section>
+        </footer>
     </body>
+
 </html>
