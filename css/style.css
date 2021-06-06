@@ -77,8 +77,9 @@ img {
 }
 
 .advantages {
-  /*  background-color: var(--basic-white);  */
+    background-color: var(--basic-white);
     color: var(--basic-lightblack);
+    text-align: center;
 }
 
 .advantages li {
