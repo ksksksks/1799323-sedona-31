@@ -17,113 +17,67 @@
 
 .page_body {
     min-width: 960px;
-    margin: 0;
-    padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: var(--basic-lightblack);
+    color: var(--basic-black);
     text-transform: uppercase;
-    background-color: var(--basic-grey);
+    background-color: var(--basic-white); /* точно белый, а не серый? */
+    text-align: center;
 }
 
-a {
+.page_body li {
+    list-style: none;
+}
+
+.page_body a {
+    color: var(--basic-black);
     text-decoration: none;
 }
 
 img {
     max-width: 100%;
     height: auto;
-    background-color: var(--basic-white);
 }
 
-.main_header {
-    background-color: #FFFFFF;
-}
-
-.nav_list li {
-    font-size: 14px;
-    font-style: normal;
+.list {
+    color: var(--basic-black);
     font-weight: 700;
     line-height: 26px;
-    letter-spacing: 0px;
-    text-align: center;
-    list-style: none;
-    background-color: #FFFFFF;
-    color: var(--basic-black);
 }
 
-.nav_list li a {
-    color: var(--basic-black);
+.main_title {
+    color: var(--basic-lightblack);
 }
 
-.slogan {
-    background-color: #FFFFFF;
-    line-height: 26px;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 0px;
-}
-
-.slogan h1 {
-    font-style: normal;
+.main_title h1 {
     font-size: 21px;
     line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0px;
-    color: var(--basic-black);
 }
 
 .advantages {
-    background-color: var(--basic-white);
     color: var(--basic-lightblack);
-    text-align: center;
+    line-height: 21px;
 }
 
-.advantages li {
-    text-decoration: none;
-    list-style: none;
-    text-align: center;
-}
-
-.advantage_white {
-    background-color: #81B3D2;
-    color: var(--basic-white);
-}
-
-.advantage_white .advantage_subtitle {
+.title {
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
-    letter-spacing: 0px;
+}
+
+.background_blue {
+    background-color: var(--basic-blue);
     color: var(--basic-white);
 }
 
-.advantage_subtitle {
-    font-size: 21px;
-    line-height: 21px;
-    font-weight: 700;
-    letter-spacing: 0px;
-    color: var(--basic-black);
-}
-
-.advantage_background_white {
-    background-color: var(--basic-white);
-}
-
-.advantage_background_grey {
+.background_grey {
     background-color: var(--basic-lightgrey);
 }
 
 .interested {
-    background-color: var(--basic-white);
-    color: var(--basic-black);
-    text-align: center;
-    font-style: normal;
     line-height: 24px;
-    letter-spacing: 0px;
 }
 
 .interested h2 {
@@ -131,79 +85,56 @@ img {
     font-weight: 700;
 }
 
-.interested a {
-    color: var(--basic-white);
-}
-
 .interested a:hover {
     background-color: var(--basic-brown-hover);
-}
-
-.hotel_search_title:focus {
-        background-color: var(--basic-brown-focus);
-        color: rgba(ff, ff, ff, 0.3);
 }
 
 .hotel_search_title {
     background-color: var(--basic-brown);
     color: var(--basic-white);
-    font-size: 21px;
+}
+
+.hotel_search_title:hover {
+    background-color: var(--basic-brown-hover);
+    color: var(--basic-white);
+}
+
+.hotel_search_title:focus {
+    background-color: var(--basic-brown-focus);
+    color: rgba(255,255,255,.3);
+}
+
+.date,
+.number  {
     font-weight: 700;
     line-height: 26px;
-    letter-spacing: 0px;
+    background-color: var(--basic-field);
+}
+
+.number {
     text-align: center;
 }
 
-.hotel_search_title a {
-    vertical-align: middle;
-}
-
-.hotel_search_form {
-    background-color: var(--basic-white);
-    color: var(--basic-black);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: 0px;
-}
-
-.hotel_search_form .date:hover,
-.hotel_search_form .number:hover {
+.date:hover,
+.number:hover {
     background-color: var(--basic-field-hover);
 }
 
-.hotel_search_form .date:focus,
-.hotel_search_form .number:focus {
- background-color: var(--basic-white);
+.date:focus,
+.number:focus {
  border-color: var(--basic-field-focus);
 }
 
-.hotel_search_form .date {
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 0px;
-    background-color: var(--basic-field);
-}
-
-.hotel_search_form .number {
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 0px;
-    text-align: center;
+.button {
     text-transform: uppercase;
-    background-color: var(--basic-field);
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
 }
 
 .hotel_search_button {
-    background-color: var(--basic-blue);
     color: var(--basic-white);
-    font-size: 21px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 26px;
-    letter-spacing: 0px;
-    text-align: center;
-    text-transform: uppercase;
+    background-color: var(--basic-blue);
 }
 
 .hotel_search_button:hover {
@@ -212,41 +143,12 @@ img {
 
 .hotel_search_button:focus {
     background-color: var(--basic-blue-focus);
-    color: rgba(ff, ff, ff, 0.3);
-    }
-
-.contacts {
-    background-color: var(--basic-white);
-    color: var(--basic-black)
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 0px;
-    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
 }
 
-.contacts a {
-    color: var(--basic-black);
-}
 
-.socials {
-    background-color: var(--basic-white);
-    text-align: center;
-}
 
-.socials li {
-    list-style: none;
-    text-decoration: none;
-}
 
-.created {
-    background-color: var(--basic-white);
-    color: var(--basic-black);
-    line-height: 26px;
-    letter-spacing: 0px;
-    text-align: center;
-}
 
 
 
