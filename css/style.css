@@ -1,9 +1,9 @@
 :root {
     --basic-white: #FFFFFF;
+    --basic_white_rgba: rgba(255,255,255,.3);
     --basic-blue: #81B3D2;
     --basic-blue-hover: #669EC0;
     --basic-blue-focus:#5496BD;
-    --basic-grey: #888888;
     --basic-lightgrey: #EEEEEE;
     --basic-brown: #766357;
     --basic-field: #F2F2F2;
@@ -15,6 +15,10 @@
     --basic-brown-focus: #503E33;
 }
 
+.site_body {
+    background-color: var(--basic-field);
+}
+
 .page_body {
     min-width: 960px;
     font-family: "PT Sans", Arial, sans-serif;
@@ -23,12 +27,8 @@
     font-weight: 400;
     color: var(--basic-black);
     text-transform: uppercase;
-    background-color: var(--basic-white); /* точно белый, а не серый? */
+    background-color: var(--basic-white);
     text-align: center;
-}
-
-.page_body li {
-    list-style: none;
 }
 
 .page_body a {
@@ -36,7 +36,13 @@
     text-decoration: none;
 }
 
-img {
+.clear_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.images {
     max-width: 100%;
     height: auto;
 }
@@ -101,11 +107,11 @@ img {
 
 .hotel_search_title:focus {
     background-color: var(--basic-brown-focus);
-    color: rgba(255,255,255,.3);
+    color: var(--basic_white_rgba);
 }
 
 .date,
-.number  {
+.number {
     font-weight: 700;
     line-height: 26px;
     background-color: var(--basic-field);
@@ -143,7 +149,7 @@ img {
 
 .hotel_search_button:focus {
     background-color: var(--basic-blue-focus);
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--basic_white_rgba);
 }
 
 
