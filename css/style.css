@@ -1,6 +1,7 @@
 :root {
     --basic-white: #FFFFFF;
     --basic_white_rgba: rgba(255,255,255,.3);
+    --basic_black_active: rgba(0,0,0,.3);
     --basic-blue: #81B3D2;
     --basic-blue-hover: #669EC0;
     --basic-blue-focus:#5496BD;
@@ -13,10 +14,10 @@
     --basic-lightblack: #333333;
     --basic-brown-hover: #604E43;
     --basic-brown-focus: #503E33;
-}
-
-.site_body {
-    background-color: var(--basic-field);
+    --basic-grey: #CACACA;
+    --basic_brown-text: #666666;
+    --basic-background: rgba(0,1,1,.2);
+    ;
 }
 
 .page_body {
@@ -36,6 +37,44 @@
     text-decoration: none;
 }
 
+.site_body {
+    background-color: var(--basic-field);
+}
+
+.nav_list a:hover {
+    color: var(--basic-blue);
+}
+
+.nav_list a:active {
+    color: var(--basic_black_active);
+}
+
+.nav_list a:focus {
+    color: var(--basic-brown);
+}
+
+.selected {
+    color: var(--basic-brown);
+}
+
+.hotel_filter {
+    background-color: var(--basic-background) /* Временно устанавливаю фоновый цвет, пока не вставлю фоновую картинку */
+}
+
+.hotel_filter li,
+.hotel_filter fieldset  {
+    color: var(--basic-white);
+    font-weight: 400;
+    text-align: left;
+    border: none;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
 .clear_list {
     padding: 0;
     margin: 0;
@@ -53,11 +92,22 @@
     line-height: 26px;
 }
 
-.main_title {
+.main_title,
+.hotel_information {
     color: var(--basic-lightblack);
+    font-weight: 400;
 }
 
-.main_title h1 {
+.hotel_information a:hover {
+    color: var(--basic-blue);
+}
+
+.hotel_information a:active {
+    color: var(--basic_black_active);
+}
+
+.main_title h1,
+.footer {
     font-size: 21px;
     line-height: 26px;
 }
@@ -98,6 +148,10 @@
 .hotel_search_title {
     background-color: var(--basic-brown);
     color: var(--basic-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 21px;
+    border: none;
 }
 
 .hotel_search_title:hover {
@@ -105,9 +159,13 @@
     color: var(--basic-white);
 }
 
-.hotel_search_title:focus {
+.hotel_search_title:active {
     background-color: var(--basic-brown-focus);
     color: var(--basic_white_rgba);
+}
+
+.number {
+    text-align: center;
 }
 
 .date,
@@ -117,10 +175,6 @@
     background-color: var(--basic-field);
 }
 
-.number {
-    text-align: center;
-}
-
 .date:hover,
 .number:hover {
     background-color: var(--basic-field-hover);
@@ -128,32 +182,107 @@
 
 .date:focus,
 .number:focus {
- border-color: var(--basic-field-focus);
+    border-color: var(--basic-field-focus);
 }
 
-.button {
+.button,
+.found {
     text-transform: uppercase;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
+    color: var(--basic-black);
+
 }
 
 .hotel_search_button {
-    color: var(--basic-white);
     background-color: var(--basic-blue);
+    color: var(--basic-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 21px;
+    border: none;
 }
 
 .hotel_search_button:hover {
     background-color: var(--basic-blue-hover);
 }
 
-.hotel_search_button:focus {
+.hotel_search_button:active {
     background-color: var(--basic-blue-focus);
     color: var(--basic_white_rgba);
 }
 
+.filter_search_button {
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: transparent;
+}
 
+.filter_search_button:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
 
+.sort_filter {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.sort_filter_button {
+    text-align: right;
+}
+
+.sort_filter_type button {
+    color: var(--basic_black_active);
+    border: none;
+    border-bottom: 1px dashed var(--basic-blue);
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.sort_filter_type button:hover {
+    color: var(--basic-blue);
+    background-color: transparent;
+}
+
+.sort_filter_type button:active {
+    color: var(--basic-black);
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.sort_filter_type button:focus {
+    color: var(--basic-blue);
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.sort_filter_button button {
+    background-color: var(--basic-grey);
+}
+
+.sort_filter_button button:hover {
+    background-color: var(--basic-black);
+}
+
+.sort_filter_button button:active,
+.sort_filter_button button:focus {
+    background-color: var(--basic-blue);
+}
+
+.hotels  {
+    text-align: left;
+}
+
+.raiting {
+    font-weight: 400;
+    text-align: right;
+    color: var(--basic_brown-text);
+    background-color: var(--basic-field);  /* Я же могу сейчас просто задать фон, а потом уже сделать прямоугольник? */
+}
 
 
 
