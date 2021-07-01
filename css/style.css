@@ -91,7 +91,8 @@
     color: var(--basic_black_active);
 }
 
-.nav_list a:focus {
+.nav_list a:focus,
+.selected {
     color: var(--basic-brown);
 }
 
@@ -189,12 +190,14 @@
     padding: 30px 124px;
 }
 
-.hotel_search_title:hover {
+.hotel_search_title:hover,
+.catalog_button_booking:hover {
     background-color: var(--basic-brown-hover);
     color: var(--basic-white);
 }
 
-.hotel_search_title:active {
+.hotel_search_title:active,
+.catalog_button_booking:active {
     background-color: var(--basic-brown-focus);
     color: var(--basic_white_rgba);
 }
@@ -243,11 +246,13 @@
     padding: 16px 181px;
 }
 
-.hotel_search_button:hover {
+.hotel_search_button:hover,
+.catalog_button_more:hover {
     background-color: var(--basic-blue-hover);
 }
 
-.hotel_search_button:active {
+.hotel_search_button:active,
+.catalog_button_more:active {
     background-color: var(--basic-blue-focus);
     color: var(--basic_white_rgba);
 }
@@ -275,17 +280,28 @@
     line-height: 26px;
     padding-right: 261px;
     padding-top: 47px;
-    color: var(--basic-brown);
+    color: var(--basic-black);
 }
-
-
-
-
 
                                     /*СТРАНИЦА КАТАЛОГА*/
 
+.catalog {
+    padding-right: 73px;
+    padding-left: 73px;
+    box-shadow: 0px 5px 15px var(--basic-background);
+}
+
+.catalog_container h1,
+.catalog_container h2 {
+    text-align: center;
+}
+
 .hotel_filter {
-    background-color: var(--basic-background) /* Временно устанавливаю фоновый цвет, пока не вставлю фоновую картинку */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--basic-background); /* Временно устанавливаю фоновый цвет, пока не вставлю фоновую картинку */
+    padding-top: 26.5px;
+    padding-bottom: 32.5px;
 }
 
 .hotel_filter li,
@@ -296,23 +312,44 @@
     border: none;
 }
 
+.comfort_filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 72px;
+}
+
+.comfort li,
+.room_type li {
+    padding-top: 25px;
+}
+
+.room_type {
+    padding-left: 47px;
+}
+
 .subtitle {
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
 }
 
-
-
-.hotel_information a:hover {
-    color: var(--basic-blue);
+.cost {
+    padding-right: 73px;
+    padding-left: 211px;
+    text-align: left;
 }
 
-.hotel_information a:active {
-    color: var(--basic_black_active);
+.cost_filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 17px;
+    padding-bottom: 63.5px;
+    padding-left: 62px;
 }
 
 .filter_search_button {
+    margin: 0;
+    padding: 8px 36px;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: transparent;
@@ -324,22 +361,36 @@
 }
 
 .sort_filter {
-    text-transform: uppercase;
     font-size: 12px;
     line-height: 18px;
     text-align: left;
 }
 
-.sort_filter_button {
-    text-align: right;
+.found,
+.sort {
+    display: inline-block;
+}
+
+.sort {
+    padding-right: 40px;
+    padding-left: 46px;
+}
+
+.sort_filter_type {
+    display: inline-block;
+    gap: 32px;
+    margin: 0;
+    padding-left: 40px;
 }
 
 .sort_filter_type button {
     color: var(--basic_black_active);
     border: none;
-    border-bottom: 1px dashed var(--basic-blue);
+    border-bottom: 1px dashed var(--basic-blue);   /* Почему подчеркивается весь текст? */
     background-color: transparent;
     text-transform: uppercase;
+    padding-right: 32px;
+    padding-top: 32px;
 }
 
 .sort_filter_type button:hover {
@@ -359,6 +410,10 @@
     border-bottom: none;
 }
 
+.sort_filter_button {
+    text-align: right;
+}
+
 .sort_filter_button button {
     background-color: var(--basic-grey);
 }
@@ -372,13 +427,94 @@
     background-color: var(--basic-blue);
 }
 
-.hotels  {
+.hotels {
     text-align: left;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-top: 1px solid var(--basic-field-focus);
+}
+
+.hotel_block {
+    display: grid;
+    gap: 0;
+    grid-template-columns: min-content max-content min-content;
+    border-bottom: 1px solid var(--basic-field-focus);
+}
+
+.hotel_block .found {
+    grid-area: title;
+    margin-top: 23.5px;
+    margin-bottom: 7px;
+}
+
+.hotel_img {
+    padding: 0;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.hotel_information a:hover {
+    color: var(--basic-blue);
+}
+
+.hotel_information a:active {
+    color: var(--basic_black_active);
+}
+
+.hotel_booking {
+    display: grid;
+    grid-template-columns: 1fr 1fr min-content;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+    'type price .'
+    'more booking raiting';
+}
+
+.hotel_type {
+    grid-area: type;
+}
+
+.hotel_price {
+    grid-area: price;
+    margin-left: -10px;
+}
+
+.catalog_button_more,
+.catalog_button_booking {
+    color: var(--basic-white);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    border: none;
+    height: 27px;
+    margin-top: 15.5px;
+}
+
+.catalog_button_more {
+    background-color: var(--basic-blue);
+    width: 110px;
+    grid-area: more;
+}
+
+.catalog_button_booking {
+    background-color: var(--basic-brown);
+    width: 142px;
+    grid-area: booking;
+    margin-left: -10px;
 }
 
 .raiting {
+    grid-area: raiting;
     font-weight: 400;
-    text-align: right;
+    text-align: center;
     color: var(--basic_brown-text);
     background-color: var(--basic-field);  /* Я же могу сейчас просто задать фон, а потом уже сделать прямоугольник? */
+    border: none;
+    height: 27px;
+    width: 110px;
+    margin-left: 522px;
+    margin-top: 15.5px;
 }
+
