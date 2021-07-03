@@ -84,11 +84,13 @@
 
                     <section class="sort_filter">
                         <div class="found"> найдено: 3 </div>
-                        <div class="sort">сортировка:</div>
-                        <div class="sort_filter_type">
-                            <button type="submit">по цене</button>    <!-- Необходимо сделать ее неактивной -->
-                            <button type="submit">по типу</button>
-                            <button type="submit">по рейтингу</button>
+                        <div class="sort">
+                            сортировка:
+                            <div class="sort_filter_type">
+                                <button type="submit">по цене</button>    <!-- Необходимо сделать ее неактивной -->
+                                <button type="submit">по типу</button>
+                                <button type="submit">по рейтингу</button>
+                            </div>
                         </div>
                         <div class="sort_filter_button">
                             <button type="submit">по убыванию</button>
@@ -98,10 +100,9 @@
                     <section>
                         <h2>Подборка жилья</h2>
                         <ul class="clear_list hotels list">
-
                             <li class="hotel_block">
-                                <a href="blank.html">
-                                    <img class="images hotel_img" src="img/hotel_amara_resort.jpg" width="135" height="90" alt="гостиница 5 звезд на горе с шикарными закатами">
+                                <a class="hotel_img" href="blank.html">
+                                    <img class="images" src="img/hotel_amara_resort.jpg" width="135" height="90" alt="гостиница 5 звезд на горе с шикарными закатами">
                                 </a>
                                 <div class="hotel_information">
                                     <p class="clear_list">
@@ -110,16 +111,19 @@
                                     <div class="hotel_booking">
                                         <div class="hotel_type"> Гостиница </div>
                                         <div class="hotel_price"> от 4000 ₽ </div>
-                                        <button class="catalog_button_more" type="submit">подробнее</button>
-                                        <button class="catalog_button_booking" type="submit">забронировать</button>
-                                        <div class="raiting"> рейтинг 8,5 </div>
+                                        <button class="catalog_button_more catalog_button" type="submit">подробнее</button>
+                                        <button class="catalog_button_booking catalog_button" type="submit">забронировать</button>
                                     </div>
+                                </div>
+                                <div class="raiting">
+                                    <div class="stars">*тут будут звездочки*</div>
+                                    <p class="clear_list score"> рейтинг 8,5 </p>
                                 </div>
                             </li>
 
                             <li class="hotel_block">
-                                <a href="blank.html">
-                                    <img class="images hotel_img" src="img/motel_desert.jpg" width="135" height="90" alt="придорожный мотель 3 звезды">
+                                <a class="hotel_img" href="blank.html">
+                                    <img class="images" src="img/motel_desert.jpg" width="135" height="90" alt="придорожный мотель 3 звезды">
                                 </a>
                                 <div class="hotel_information">
                                     <p class="clear_list">
@@ -128,16 +132,19 @@
                                     <div class="hotel_booking">
                                         <div class="hotel_type"> Мотель </div>
                                         <div class="hotel_price"> от 3000 ₽ </div>
-                                        <button class="catalog_button_more" type="submit">подробнее</button>
-                                        <button class="catalog_button_booking" type="submit">забронировать</button>
-                                        <div class="raiting"> рейтинг 8,9 </div>
+                                        <button class="catalog_button_more catalog_button" type="submit">подробнее</button>
+                                        <button class="catalog_button_booking catalog_button" type="submit">забронировать</button>
                                     </div>
+                                </div>
+                                <div class="raiting">
+                                    <div class="stars">*тут будут звездочки*</div>
+                                    <p class="clear_list score"> рейтинг 8,9 </p>
                                 </div>
                             </li>
 
                             <li class="hotel_block">
-                                <a href="blank.html">
-                                    <img class="images hotel_img" src="img/aparts_diablo.jpg" width="135" height="90" alt="Апартаменты с большой лужайкой">
+                                <a class="hotel_img" href="blank.html">
+                                    <img class="images" src="img/aparts_diablo.jpg" width="135" height="90" alt="Апартаменты с большой лужайкой">
                                 </a>
                                 <div class="hotel_information">
                                     <p class="clear_list">
@@ -146,12 +153,16 @@
                                     <div class="hotel_booking">
                                         <div class="hotel_type"> Апартаменты </div>
                                         <div class="hotel_price"> от 2000 ₽ </div>
-                                        <button class="catalog_button_more" type="submit">подробнее</button>
-                                        <button class="catalog_button_booking" type="submit">забронировать</button>
-                                        <div class="raiting"> рейтинг 9,2 </div>
+                                        <button class="catalog_button_more catalog_button" type="submit">подробнее</button>
+                                        <button class="catalog_button_booking catalog_button" type="submit">забронировать</button>
                                     </div>
                                 </div>
+                                <div class="raiting">
+                                    <div class="stars">*тут будут звездочки*</div>
+                                    <p class="clear_list score"> рейтинг 9,2 </p>
+                                </div>
                             </li>
+
                         </ul>
                     </section>
                 </mian>

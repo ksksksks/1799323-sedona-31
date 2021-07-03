@@ -246,13 +246,11 @@
     padding: 16px 181px;
 }
 
-.hotel_search_button:hover,
-.catalog_button_more:hover {
+.catalog_button:hover {
     background-color: var(--basic-blue-hover);
 }
 
-.hotel_search_button:active,
-.catalog_button_more:active {
+.catalog_button:active {
     background-color: var(--basic-blue-focus);
     color: var(--basic_white_rgba);
 }
@@ -283,7 +281,7 @@
     color: var(--basic-black);
 }
 
-                                    /*СТРАНИЦА КАТАЛОГА*/
+/*  /////////////////////////////////     СТРАНИЦА КАТАЛОГА     /////////////////////////////////  */
 
 .catalog {
     padding-right: 73px;
@@ -300,8 +298,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--basic-background); /* Временно устанавливаю фоновый цвет, пока не вставлю фоновую картинку */
-    padding-top: 26.5px;
-    padding-bottom: 32.5px;
+    margin: 0 -73px;
+    padding-top: 26px;
+    padding-bottom: 32px;
 }
 
 .hotel_filter li,
@@ -314,17 +313,20 @@
 
 .comfort_filter {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 72px;
+    grid-template-columns: min-content 1fr;
+    margin-left: 72px;
 }
 
-.comfort li,
+.comfort li{
+    padding-top: 25px;
+}
+
 .room_type li {
     padding-top: 25px;
 }
 
 .room_type {
-    padding-left: 47px;
+    margin-left: 119px;
 }
 
 .subtitle {
@@ -343,7 +345,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 17px;
-    padding-bottom: 63.5px;
+    padding-bottom: 63px;
     padding-left: 62px;
 }
 
@@ -364,21 +366,21 @@
     font-size: 12px;
     line-height: 18px;
     text-align: left;
+    margin-top: 30px;
 }
 
-.found,
-.sort {
+.found {
     display: inline-block;
 }
 
 .sort {
     padding-right: 40px;
     padding-left: 46px;
+    display: inline-block;
 }
 
 .sort_filter_type {
     display: inline-block;
-    gap: 32px;
     margin: 0;
     padding-left: 40px;
 }
@@ -390,7 +392,6 @@
     background-color: transparent;
     text-transform: uppercase;
     padding-right: 32px;
-    padding-top: 32px;
 }
 
 .sort_filter_type button:hover {
@@ -412,6 +413,7 @@
 
 .sort_filter_button {
     text-align: right;
+    margin-top: -28px;
 }
 
 .sort_filter_button button {
@@ -428,8 +430,8 @@
 }
 
 .hotels {
-    text-align: left;
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     border-top: 1px solid var(--basic-field-focus);
 }
@@ -438,20 +440,33 @@
     display: grid;
     gap: 0;
     grid-template-columns: min-content max-content min-content;
+    grid-template-rows: 1fr;
     border-bottom: 1px solid var(--basic-field-focus);
-}
-
-.hotel_block .found {
-    grid-area: title;
-    margin-top: 23.5px;
-    margin-bottom: 7px;
+    grid-template-areas:
+    'hotel_img hotel_inf raiting';
 }
 
 .hotel_img {
+    grid-area: hotel_img;
     padding: 0;
     margin-top: 30px;
     margin-right: 30px;
-    margin-bottom: 30px;
+}
+
+.hotel_information {
+    width: 780px;
+    grid-area: hotel_inf;
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: min-content max-content;
+    grid-template-areas:
+    'found .'
+    'hotel_booking';
+ }
+
+.hotel_information .found {
+    grid-area: found;
+    margin-top: 23px;
 }
 
 .hotel_information a:hover {
@@ -464,11 +479,13 @@
 
 .hotel_booking {
     display: grid;
-    grid-template-columns: 1fr 1fr min-content;
-    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     grid-template-areas:
-    'type price .'
-    'more booking raiting';
+    'type price'
+    'more booking';
+    margin-bottom: 30px;
+    column-gap: 16px;
 }
 
 .hotel_type {
@@ -480,8 +497,7 @@
     margin-left: -10px;
 }
 
-.catalog_button_more,
-.catalog_button_booking {
+.catalog_button {
     color: var(--basic-white);
     text-transform: uppercase;
     font-size: 14px;
@@ -489,7 +505,7 @@
     font-weight: 700;
     border: none;
     height: 27px;
-    margin-top: 15.5px;
+    margin-top: 15px;
 }
 
 .catalog_button_more {
@@ -507,14 +523,31 @@
 
 .raiting {
     grid-area: raiting;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+    'stars'
+    'score';
     font-weight: 400;
-    text-align: center;
     color: var(--basic_brown-text);
-    background-color: var(--basic-field);  /* Я же могу сейчас просто задать фон, а потом уже сделать прямоугольник? */
+    margin-bottom: 30px;
+    margin-right: 73px;
+}
+
+.stars {
+    color: red;
+}
+
+.score {
+    background-color: var(--basic-field);
     border: none;
     height: 27px;
     width: 110px;
-    margin-left: 522px;
-    margin-top: 15.5px;
+    text-align: center;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
+
+
 
