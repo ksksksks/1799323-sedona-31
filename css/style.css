@@ -49,38 +49,45 @@
     text-transform: uppercase;
     background-color: var(--basic-white);
 }
-
+/*
 .main_header {
     display: grid;
     margin-bottom: 15px;
 }
+*/
 
-.main_header,
-.container
-{
+.container {
     text-align: center;
 }
 
 .main_navigation {
-    display: grid;
+    margin-bottom: 15px;
 }
 
 .main_header_logo {
     width: 138px;
     height: 70px;
-    justify-self: center;
+    align-self: center;
 }
 
 .images {
     display: block;
     height: auto;
 }
-
+/*
 .main_navigation_list {
     display: grid;
     list-style: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
+}
+*/
+
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .nav_list a:hover {
@@ -254,31 +261,46 @@
     background-color: var(--basic-blue-focus);
     color: var(--basic_white_rgba);
 }
-
+/*
 .footer {
     display: grid;
     gap: 0;
     grid-template-columns: 1fr 1fr 1fr;
 }
+*/
 
+.footer {
+    display: flex;
+    align-items: stretch;
+    align-items: center;
+    justify-content: space-around;
+    margin: 36px 0;
+}
+/*
 .contacts {
     padding-top: 23px;
     padding-bottom: 36px;
     padding-left: 136px;
 }
-
 .socials {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6px;
     padding: 36px 190px;
 }
+*/
 
 .created {
+    display: flex;
+    /*
     line-height: 26px;
     padding-right: 261px;
     padding-top: 47px;
-    color: var(--basic-black);
+    */
+}
+
+.created_link {
+    margin-left: 15px;
 }
 
 /*  /////////////////////////////////     СТРАНИЦА КАТАЛОГА     /////////////////////////////////  */
