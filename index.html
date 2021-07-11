@@ -119,34 +119,44 @@
                     </section>
                     <div class="interested_form">
                         <form class="list">
-                            <div class="search_list">
-                                дата заезда:
+                            <div class="arrival">
+                                <div class="search_list">
+                                    дата заезда:
+                                </div>
+                                <div class="date">
+                                    <input  type="date" id="start" name="trip-start" value="24 апреля 2017">
+                                    <button class="clear_list open_calendar" type="button">Открыть календарь</button>
+                                </div>
                             </div>
-                            <input class="date" type="date" id="start" name="trip-start" value="24 апреля 2017">
-                            <p class="clear_list">
-                                <button class="open_calendar" type="button">Открыть календарь</button>
-                            </p>
-                            <div class="search_list">
-                                дата выезда:
+                            <div class="departure">
+                                <div class="search_list">
+                                    дата выезда:
+                                </div>
+                                <div class="date">
+                                    <input type="date" id="finish" name="trip-finish" value="4 июля 2017">
+                                    <button class="clear_list open_calendar" type="button">Открыть календарь</button>
+                                </div>
                             </div>
-                            <input class="date" type="date" id="finish" name="trip-finish" value="4 июля 2017">
-                            <p class="clear_list">
-                                <button class="open_calendar" type="button">Открыть календарь</button>
-                            </p>
+                            <div class="people">
+                                <div class="search_list">
+                                    взрослые:
+                                </div>
+                                <div class="number" >
+                                    <button class="button_less" type="button"> - </button>
+                                    <input type="number" id="adults" value="2" min="1">
+                                    <button class="button_more" type="button"> + </button>
+                                </div>
+                                <div class="search_list">
+                                    дети:
+                                </div>
+                                <div class="number">
+                                    <button class="button_less" type="button"> - </button>
+                                    <input type="number" id="children" value="0" min="0">
+                                    <button class="button_more" type="button"> + </button>
+                                </div>
+                            </div>
 
-                            <div class="search_list">
-                                взрослые:
-                            </div>
-                            <button class="button_less" type="button">Уменьшить></button>
-                            <input class="number" type="number" id="adults" value="2" min="1">
-                            <button class="button_more" type="button">Увеличить</button>
-                            <div class="search_list">
-                                дети:
-                            </div>
-                            <button class="button_less" type="button">Уменьшить></button>
-                            <input class="number" type="number" id="children" value="0" min="0">
-                            <button class="button_more" type="button">Увеличить</button>
-                            <p class="clear_list">
+                            <p class="clear_list find">
                                 <button class="button hotel_search_button" type="submit">найти</button>
                             </p>
                         </form>
